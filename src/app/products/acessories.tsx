@@ -1,5 +1,5 @@
 import React from 'react';
-import prod from '../products.json';
+import prod from '../products_Acessories.json';
 import Image from 'next/image';
 interface Product {
   id: number;

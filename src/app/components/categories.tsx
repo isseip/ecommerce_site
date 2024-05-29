@@ -5,10 +5,10 @@ function Categories(){
         <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box w-full">
   <li><Link href="/">Home</Link></li>
   <li><Link href="/Men">Men</Link></li>
-  <li><a>Women</a></li>
-  <li><a>Shoes</a></li>
-  <li><a>Jewelry</a></li>
-  <li><a>Acessories</a></li>
+  <li><Link href="/Women">Women</Link></li>
+  <li><Link href="/Shoes">Shoes</Link></li>
+  <li><Link href="/Jewelry">Jewelry</Link></li>
+  <li><Link href="/Acessories">Acessories</Link></li>
 </ul>
         </>
     );
