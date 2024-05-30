@@ -1,66 +1,65 @@
-
 [
-    {
-      "id": 1,
-      "name": "assesories",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    },
-    {
-      "id": 2,      
-      "name": "Product 2",
-      "description": "Description for product 2",
-      "price": 200,
-      "imgUrl":""
-    },
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    },
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    },
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    },
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    },
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    },
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    },
-    {
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 100,
-      "imgUrl":""
-    }
-  ]
+  {
+    "id": 501,
+    "name": "Wireless Charging Pad",
+    "description": "This sleek wireless charging pad allows you to charge your compatible smartphone or other devices without the hassle of cables. Simply place your device on the pad, and it will start charging automatically.",
+    "price": 29.99,
+    "imgUrl": "product501.jpg"
+  },
+  {
+    "id": 502,
+    "name": "Bluetooth Headphones",
+    "description": "Experience outstanding sound quality and wireless freedom with these Bluetooth headphones. With up to 20 hours of battery life and a comfortable, over-ear design, they're perfect for music, movies, and calls.",
+    "price": 79.99,
+    "imgUrl": "product502.jpg"
+  },
+  {
+    "id": 503,
+    "name": "Phone Grip Stand",
+    "description": "This multi-functional phone grip stand provides a secure grip for your smartphone, doubling as a kickstand for hands-free viewing. Made from durable silicone, it's available in various colors.",
+    "price": 9.99,
+    "imgUrl": "product503.jpg"
+  },
+  {
+    "id": 504,
+    "name": "Power Bank",
+    "description": "Never run out of battery with this high-capacity power bank. With dual USB ports and a sleek, compact design, it's perfect for charging your smartphone, tablet, or other devices on the go.",
+    "price": 24.99,
+    "imgUrl": "product504.jpg"
+  },
+  {
+    "id": 505,
+    "name": "Phone Camera Lens Kit",
+    "description": "Upgrade your smartphone photography with this versatile camera lens kit. Includes wide-angle, macro, and fisheye lenses, allowing you to capture stunning photos and videos in various styles.",
+    "price": 19.99,
+    "imgUrl": "product505.jpg"
+  },
+  {
+    "id": 506,
+    "name": "Wireless Earbuds",
+    "description": "Experience truly wireless freedom with these compact and stylish earbuds. With Bluetooth connectivity, long battery life, and a secure, comfortable fit, they're perfect for workouts, commuting, or everyday use.",
+    "price": 49.99,
+    "imgUrl": "product506.jpg"
+  },
+  {
+    "id": 507,
+    "name": "Phone Armband",
+    "description": "This adjustable armband allows you to securely carry your smartphone during workouts or outdoor activities. Made from breathable, sweat-resistant material, it features a reflective strip for added visibility.",
+    "price": 14.99,
+    "imgUrl": "product507.jpg"
+  },
+  {
+    "id": 508,
+    "name": "Phone Tripod Stand",
+    "description": "Capture steady photos and videos with this versatile tripod stand designed for smartphones. With adjustable legs and a rotating ball head, it's perfect for vlogging, time-lapses, and hands-free photography.",
+    "price": 17.99,
+    "imgUrl": "product508.jpg"
+  },
+  {
+    "id": 509,
+    "name": "Phone Car Mount",
+    "description": "This adjustable car mount securely holds your smartphone, allowing you to use it for navigation, music streaming, or hands-free calls while driving. With a sturdy grip and easy one-touch operation.",
+    "price": 12.99,
+    "imgUrl": "product509.jpg"
+  }
+ ]

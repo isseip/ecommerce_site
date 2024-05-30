@@ -1,11 +1,13 @@
-import Products from "../products/jewelry";
+import Products_Jewelery from "../products/jewelry";
 import Heading from "../components/heading";
 import Categories from "../components/categories";
+import Footer from "../components/footer";
 export default function Jewelry(){
     return( <>
     <Heading/>
     <Categories/>
-    <Products/>
+    <Products_Jewelery/>
+    <Footer/>
     </>
     );
 }

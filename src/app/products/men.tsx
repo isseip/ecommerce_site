@@ -1,7 +1,8 @@
 import React from 'react';
-import prod from '../products_Men.json';
+import prod from '../products_Men';
 import Image from 'next/image';
-interface Product {
+
+interface Product_Men {
   id: number;
   name: string;
   description: string;
@@ -9,17 +10,17 @@ interface Product {
   imageUrl: string;
 }
 
-const Products = () => {
-  const products: Product[] = prod;
+const Products_Men = () => {
+  const products_men: Product_Men[] = prod;
 
-  if (!products || products.length === 0) {
+  if (!products_men || products_men.length === 0) {
     return <div>No products available.</div>;
   }
 
   return (
     <div className="container mx-auto mt-12 p-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.map((product) => (
+        {products_men.map((product) => (
           <div key={product.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
             <Image src={product.imageUrl} alt={product.name} className="w-full h-48 object-cover" />
             <div className="p-4 flex flex-col flex-grow text-white">
@@ -35,4 +36,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products_Men;
