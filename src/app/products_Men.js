@@ -7,7 +7,7 @@ const prod=
       "name": "Dress Shirt",
       "description": "This crisp cotton dress shirt is perfect for the office or a formal occasion. With a classic button-down collar and a tailored fit, it's versatile and comfortable.",
       "price": 49.99,
-      "imgUrl": "product101.jpg"
+      "imgUrl": product1
     },
     {
       "id": 102,

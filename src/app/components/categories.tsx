@@ -9,8 +9,8 @@ function Categories(){
   <li><Link href="/Shoes">Shoes</Link></li>
   <li><Link href="/Jewelry">Jewelry</Link></li>
   <li><Link href="/Acessories">Acessories</Link></li>
-</ul>
-        </>
+   </ul>
+   </>
     );
 }
 

@@ -1,15 +1,16 @@
 import Link from "next/link";
+
 function Heading() {
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 fixed top-0 left-0 right-0 z-50">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">MEMOSA</a>
+          <a className="btn btn-ghost text-xl">NexBuy</a>
         </div>
         <div className="flex-none mx-auto">
           <input
             type="text"
-            placeholder="Search With Memosa🫡"
+            placeholder="Search With NexBuy🫡"
             className="input input-bordered w-full max-w-xs"
           />
         </div>
@@ -42,7 +43,9 @@ function Heading() {
                 <span className="font-bold text-lg">8 Items</span>
                 <span className="text-info">Subtotal: $999</span>
                 <div className="card-actions">
-              <button className="btn btn-primary btn-block"><Link href="/AddCart">View Cart</Link></button>
+                  <button className="btn btn-primary btn-block">
+                    <Link href="/content">View Cart</Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -72,8 +75,12 @@ function Heading() {
           </div>
         </div>
       </div>
+      <div className="mt-16">
+        {/* Add this margin top to push the content below the fixed navbar */}
+      </div>
     </>
   );
 }
 
 export default Heading;
+

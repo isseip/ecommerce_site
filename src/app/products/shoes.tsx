@@ -1,7 +1,8 @@
 import React from 'react';
-import prod from '../products_Shoes.json';
+import products from '../products_Shoes.json';
 import Image from 'next/image';
-interface Product_Shoes {
+import Link from 'next/link';
+interface Product {
   id: number;
   name: string;
   description: string;
@@ -10,28 +11,37 @@ interface Product_Shoes {
 }
 
 const Products_Shoes = () => {
-  const products_shoes: Product_Shoes[] = prod;
+  const products_shoes: Product[] = products;
 
   if (!products_shoes || products_shoes.length === 0) {
     return <div>No products available.</div>;
   }
 
-  return (
+  return (<>
     <div className="container mx-auto mt-12 p-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products_shoes.map((product) => (
           <div key={product.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
-            <Image src={product.imageUrl} alt={product.name} className="w-full h-48 object-cover" />
-            <div className="p-4 flex flex-col flex-grow text-white">
-              <h2 className="text-xl font-bold mb-2">{product.name}</h2>
-              <p className="flex-grow">{product.description}</p>
-              <p className="text-lg font-semibold mt-4">Price: ${product.price}</p>
-              <button className="mt-auto bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Add to Cart</button>
+            <Link href={`/Shoes/${product.id}`}>
+              
+            <Image src={product.imageUrl} alt={product.name} className="w-full h-48 object-cover" width={500} height={300} />
+              
+            </Link>
+            <div className="p-4 flex flex-col flex-grow text-white"> {/* Changed text color for better readability */}
+              <h2 className="text-xl font-bold mb-2">
+                <Link href={`/Shoes/${product.id}`}>
+                  {product.name}
+                </Link>
+              </h2>
+              <p className="flex-grow"><Link href={`/Shoes/${product.id}`}>{product.description}</Link></p>
+              <p className="text-lg font-semibold mt-4"><Link href={`/Shoes/${product.id}`}>Price: ${product.price}</Link></p>
+              <button className="btn btn-primary text-white bg-blue-500">Add to Cart</button>
             </div>
           </div>
         ))}
       </div>
     </div>
+   </>
   );
 };
 
