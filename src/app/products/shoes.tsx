@@ -1,5 +1,5 @@
 import React from 'react';
-import products from '../products_Shoes.json';
+import products from '../products_Shoes';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
@@ -8,11 +8,19 @@ interface Product {
   name: string;
   description: string;
   price: number;
-  imgUrl: string | StaticImageData;  // Accept both string URLs and StaticImageData
+  imageUrl: string | StaticImageData;
 }
 
 const Products_Shoes = () => {
-  if (!products || products.length === 0) {
+  const products_shoes: Product[] = products.map(product => ({
+    id: product.id,
+    name: product.name,
+    description: product.description,
+    price: product.price,
+    imageUrl: typeof product.imgUrl === 'string' ? `/images/${product.imgUrl}` : product.imgUrl  // Adjust path if necessary
+  }));
+
+  if (!products_shoes || products_shoes.length === 0 ) {   // Corrected the check for empty products array
     return <div>No products available.</div>;
   }
 
@@ -20,35 +28,32 @@ const Products_Shoes = () => {
     <>
       <div className="container mx-auto mt-12 p-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {products_shoes.map((product) => (  // Use products_men instead of products
             <div key={product.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
               <Link href={`/Shoes/${product.id}`}>
-                <a>
-                  <Image
-                    src={product.imgUrl}
+                  <Image 
+                    src={product.imageUrl}
                     alt={product.name}
                     className="w-full h-48 object-cover"
                     width={500}
                     height={300}
-                    unoptimized={typeof product.imgUrl !== 'string'}  // Optimize if it's a URL, not if it's StaticImageData
-                    layout="responsive"
+                    unoptimized={process.env.NODE_ENV === 'development'}  // Add unoptimized attribute for development mode if needed
                   />
-                </a>
               </Link>
               <div className="p-4 flex flex-col flex-grow text-white">
                 <h2 className="text-xl font-bold mb-2">
                   <Link href={`/Shoes/${product.id}`}>
-                    <a>{product.name}</a>
+                    {product.name} 
                   </Link>
                 </h2>
                 <p className="flex-grow">
                   <Link href={`/Shoes/${product.id}`}>
-                    <a>{product.description}</a>
+                    {product.description}  
                   </Link>
                 </p>
                 <p className="text-lg font-semibold mt-4">
                   <Link href={`/Shoes/${product.id}`}>
-                    <a>Price: ${product.price}</a>
+                    Price: ${product.price}
                   </Link>
                 </p>
                 <button className="btn btn-primary text-white bg-blue-500">Add to Cart</button>

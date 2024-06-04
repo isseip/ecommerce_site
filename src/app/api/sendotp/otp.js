@@ -2,6 +2,8 @@ import { connectToDatabase } from '../../../app/lib/mongodb';
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 
+
+
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
   port: process.env.EMAIL_PORT,
@@ -11,7 +13,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export async function POST(req) {
+  export async function POST(req) {
   const { db } = await connectToDatabase();
   const body = await req.json();
   const { email } = body;
@@ -35,3 +37,5 @@ export async function POST(req) {
 
   return NextResponse.json({ message: 'OTP sent' });
 }
+}
+

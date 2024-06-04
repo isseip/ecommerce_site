@@ -1,86 +1,89 @@
+import product1 from './Men/images/product1.jpg'
+const prod=
 [
   {
     "id": 201,
     "name": "Denim Jacket",
     "description": "This beautiful denim jacket is perfect for any occasion. Made from a lightweight, breathable fabric, it features a flattering A-line silhouette and a feminine V-neckline.",
     "price": 59.99,
-    "imgUrl": ""
+    "imgUrl": product1
   },
   {
     "id": 202,
     "name": "High-Waisted Jeans",
     "description": "These trendy high-waisted jeans are made from premium denim and feature a slim, flattering fit. Perfect for dressing up or down.",
     "price": 69.99,
-    "imgUrl": "product202.jpg"
+    "imgUrl": product1
   },
   {
     "id": 203,
     "name": "Sun Hat",
     "description": "This stylish sun hat is the perfect accessory for sunny days. Made from lightweight straw, it features a wide brim for added sun protection.",
     "price": 24.99,
-    "imgUrl": "product203.jpg"
+    "imgUrl": product1
   },
   {
     "id": 204,
     "name": "Camisole",
     "description": "A versatile wardrobe staple, this soft cotton camisole is perfect for layering or wearing on its own. Available in a range of colors and sizes.",
     "price": 19.99,
-    "imgUrl": "product204.jpg"
+    "imgUrl": product1
   },
   {
     "id": 205,
     "name": "Linen Shorts",
     "description": "These breezy linen shorts are perfect for warm weather. With a comfortable, relaxed fit and a trendy paperbag waist, they're both stylish and comfortable.",
     "price": 44.99,
-    "imgUrl": "product205.jpg"
+    "imgUrl": product1
   },
   {
     "id": 206,
     "name": "Wrap Top",
     "description": "This flattering wrap top is a must-have for any wardrobe. Made from a stretchy, lightweight fabric, it features a feminine V-neckline and a cinched waist.",
     "price": 39.99,
-    "imgUrl": "product206.jpg"
+    "imgUrl": product1
   },
   {
     "id": 207,
     "name": "Leather Tote Bag",
     "description": "This stylish leather tote bag is perfect for everyday use. With a spacious interior and a sturdy design, it's both fashionable and functional.",
     "price": 79.99,
-    "imgUrl": "product207.jpg"
+    "imgUrl": product1
   },
   {
     "id": 208,
     "name": "Denim Skirt",
     "description": "This classic denim skirt is a wardrobe essential. With a flattering A-line silhouette and a trendy distressed finish, it's perfect for casual or dressy occasions.",
     "price": 49.99,
-    "imgUrl": "product208.jpg"
+    "imgUrl": product1
   },
   {
     "id": 209,
     "name": "Off-Shoulder Top",
     "description": "This stylish off-shoulder top is perfect for warm weather. Made from a lightweight, breathable fabric, it features a flattering fit and a trendy bardot neckline.",
     "price": 34.99,
-    "imgUrl": "product209.jpg"
+    "imgUrl": product1
   },
   {
     "id": 210,
     "name": "Maxi Skirt",
     "description": "This elegant maxi skirt is a summer essential. Featuring a lightweight, flowing fabric and a flattering high-waisted silhouette, it's perfect for any occasion.",
     "price": 54.99,
-    "imgUrl": "product210.jpg"
+    "imgUrl": product1
   },
   {
     "id": 211,
     "name": "Cardigan Sweater",
     "description": "This cozy cardigan sweater is perfect for layering. Made from a soft, lightweight knit, it features a relaxed fit and a versatile button-front design.",
     "price": 44.99,
-    "imgUrl": "product211.jpg"
+    "imgUrl": product1
   },
   {
     "id": 212,
     "name": "Crossbody Bag",
     "description": "This stylish crossbody bag is perfect for busy days on-the-go. With multiple compartments and an adjustable strap, it's both fashionable and functional.",
     "price": 39.99,
-    "imgUrl": "product212.jpg"
+    "imgUrl": product1
   }
  ]
+export default prod;

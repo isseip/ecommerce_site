@@ -1,18 +1,20 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import products from '@/app/products_Jewelery.json';
+import products from '@/app/products_Jewelery';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Heading from '@/app/components/heading';
 import Footer from '@/app/components/footer';
 import Breadcrumbs from '@/app/components/breadcrums';
-import Link from 'next/link'
+import { StaticImageData } from 'next/image';
+import Link from 'next/link';
+
 interface Product {
   id: number;
   name: string;
   description: string;
   price: number;
-  imgUrl: string;
+  imgUrl: string | StaticImageData;
 }
 
 const ProductDetail = () => {
@@ -23,19 +25,10 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (productId) {
-      const foundProduct = products.find(product => product.id === parseInt(productId as string));
-      if (foundProduct) {
-        const productWithCorrectProp = {
-          ...foundProduct,
-          imageUrl: foundProduct.imgUrl
-        };
-        setProduct(productWithCorrectProp);
-      } else {
-        setProduct(null);
-      }
-    }    
       const foundProduct = products.find((product) => product.id === parseInt(productId as string));
       setProduct(foundProduct || null);
+
+      console.log('Found product:', foundProduct);
 
       // Find related products (e.g., products in the same category or any other criterion)
       if (foundProduct) {
@@ -43,6 +36,8 @@ const ProductDetail = () => {
           (p) => p.id !== foundProduct.id // Exclude the current product
         );
         setRelatedProducts(related);
+
+        console.log('Related products:', related);
       }
     }
   }, [productId]);
@@ -51,29 +46,13 @@ const ProductDetail = () => {
     return <div>Product not found</div>;
   }
 
-  return ( <>
-    <Heading/>
-    <Breadcrumbs/>
-    <div className="hero min-h-screen bg-base-200">
-    <div className="hero-content flex-col lg:flex-row">
-      <Image src={product.imgUrl} alt={product.name} className="max-w-sm rounded-lg shadow-2xl" />
-      <div>
-        <h1 className="text-5xl font-bold">{product.name}</h1>
-        <p className="py-6 text-xl">{product.description}</p>
-        <p className="text-lg font-semibold mt-4 p-1">Price:${product.price}</p>
-        <button className="btn btn-primary text-white bg-blue-500">Add To Cart</button>
-      </div>
-    </div>
-  </div>
-  <Footer/>
-  </>
   return (
     <>
       <Heading />
       <Breadcrumbs />
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <Image src={product.imageUrl} alt={product.name} className="max-w-sm rounded-lg shadow-2xl" />
+          <Image src={product.imgUrl} alt={product.name} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-5xl font-bold">{product.name}</h1>
             <p className="py-6 text-xl">{product.description}</p>
@@ -82,29 +61,35 @@ const ProductDetail = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto  p-5 bg-base-200">
+      <div className="container mx-auto bg-base-200 p-5">
         <h2 className="text-3xl font-bold mb-6">Related Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {relatedProducts.map((relatedProduct) => (
             <div key={relatedProduct.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
               <Link href={`/Jewelry/${relatedProduct.id}`}>
-                <Image
-                  src={relatedProduct.imageUrl}
-                  alt={relatedProduct.name}
-                  className="w-full h-48 object-cover"
-                  width={500}
-                  height={300}
-                />
+                  <Image
+                    src={relatedProduct.imgUrl}
+                    alt={relatedProduct.name}
+                    className="w-full h-48 object-cover"
+                    width={500}
+                    height={300}
+                  />
               </Link>
               <div className="p-4 flex flex-col flex-grow text-white">
                 <h2 className="text-xl font-bold mb-2">
-                  <Link href={`/Jewelry/${relatedProduct.id}`}>{relatedProduct.name}</Link>
+                  <Link href={`/Jewelry/${relatedProduct.id}`}>
+                    {relatedProduct.name}
+                  </Link>
                 </h2>
                 <p className="flex-grow">
-                  <Link href={`/Jewelry/${relatedProduct.id}`}>{relatedProduct.description}</Link>
+                  <Link href={`/Jewelry/${relatedProduct.id}`}>
+                  {relatedProduct.description}
+                  </Link>
                 </p>
                 <p className="text-lg font-semibold mt-4">
-                  <Link href={`/Jewelry/${relatedProduct.id}`}>Price: ${relatedProduct.price}</Link>
+                  <Link href={`/Jewelry/${relatedProduct.id}`}>
+                   Price: ${relatedProduct.price}
+                  </Link>
                 </p>
                 <button className="btn btn-primary text-white bg-blue-500 mt-2">Add to Cart</button>
               </div>
