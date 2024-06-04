@@ -12,7 +12,7 @@ interface Product {
   name: string;
   description: string;
   price: number;
-  imageUrl: string;
+  imgUrl: string;
 }
 
 const ProductDetail = () => {
@@ -23,6 +23,17 @@ const ProductDetail = () => {
 
   useEffect(() => {
     if (productId) {
+      const foundProduct = products.find(product => product.id === parseInt(productId as string));
+      if (foundProduct) {
+        const productWithCorrectProp = {
+          ...foundProduct,
+          imageUrl: foundProduct.imgUrl
+        };
+        setProduct(productWithCorrectProp);
+      } else {
+        setProduct(null);
+      }
+    }    
       const foundProduct = products.find((product) => product.id === parseInt(productId as string));
       setProduct(foundProduct || null);
 
@@ -40,6 +51,22 @@ const ProductDetail = () => {
     return <div>Product not found</div>;
   }
 
+  return ( <>
+    <Heading/>
+    <Breadcrumbs/>
+    <div className="hero min-h-screen bg-base-200">
+    <div className="hero-content flex-col lg:flex-row">
+      <Image src={product.imgUrl} alt={product.name} className="max-w-sm rounded-lg shadow-2xl" />
+      <div>
+        <h1 className="text-5xl font-bold">{product.name}</h1>
+        <p className="py-6 text-xl">{product.description}</p>
+        <p className="text-lg font-semibold mt-4 p-1">Price:${product.price}</p>
+        <button className="btn btn-primary text-white bg-blue-500">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+  <Footer/>
+  </>
   return (
     <>
       <Heading />
