@@ -1,5 +1,5 @@
 import React from 'react';
-import productsData from '../products_Acessories';
+import productsData from '../products_Acessories.json';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ const Products_Acessories = () => {
     name: product.name,
     description: product.description,
     price: product.price,
-    imageUrl: typeof product.imgUrl === 'string' ? `/images/${product.imgUrl}` : product.imgUrl  // Adjust path if necessary
+    imageUrl: product.imgUrl  // Adjust path if necessary
   }));
 
   if (!products_acessories || products_acessories.length === 0) {
@@ -30,7 +30,7 @@ const Products_Acessories = () => {
         {products_acessories.map((product) => (
           <div key={product.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
             <Link href={`/Acessories/${product.id}`}>
-                <Image src={product.imageUrl} alt={product.name} className="w-full h-48 object-cover" width={500} height={300} />
+                <Image src={product.imageUrl} alt={product.name} className=" object-cover" width={500} height={300} />
             </Link>
             <div className="p-4 flex flex-col flex-grow text-white">
               <h2 className="text-xl font-bold mb-2">

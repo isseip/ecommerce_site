@@ -1,15 +1,18 @@
 'use client';
 import { useState } from 'react';
 import axios from 'axios';
+
 export default function Home() {
   const [email, setEmail] = useState('');
   const [otp, setOtp] = useState('');
   const [step, setStep] = useState(1);
   const [message, setMessage] = useState('');
 
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
   const sendOtp = async () => {
     try {
-      await axios.post('/api/sendotp', { email });
+      await axios.post(`{$API_BASE_URL}/sendotp`, { email });
       setStep(2);
       setMessage('OTP sent to your email');
     } catch (error) {
@@ -19,7 +22,7 @@ export default function Home() {
 
   const verifyOtp = async () => {
     try {
-      await axios.post('/api/verify', { email, otp });
+      await axios.post(`{$API_BASE_URL}/verifyotp`, { email, otp });
       setMessage('OTP verified successfully');
     } catch (error) {
       setMessage('Invalid OTP or OTP expired');

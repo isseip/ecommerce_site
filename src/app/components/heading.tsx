@@ -1,18 +1,38 @@
-import Link from "next/link";
+'use client';
+import React, { useState } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 function Heading() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Extract the section from the current pathname
+      const section = pathname.split('/')[1] || 'Men';
+      router.push(`/${section}/search?query=${searchQuery}`);
+    }
+  };
+
   return (
     <>
       <div className="navbar bg-base-100 fixed top-0 left-0 right-0 z-50">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">NexBuy</a>
+          <a href="/" className="btn btn-ghost text-xl">NexBuy</a>
         </div>
         <div className="flex-none mx-auto">
-          <input
-            type="text"
-            placeholder="Search With NexBuy🫡"
-            className="input input-bordered w-full max-w-xs"
-          />
+          <form onSubmit={handleSearch}>
+            <input
+              type="text"
+              placeholder="Search With NexBuy🫡"
+              className="input input-bordered w-full max-w-xs"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </form>
         </div>
         <div className="flex-none">
           <div className="dropdown dropdown-end">
@@ -83,4 +103,5 @@ function Heading() {
 }
 
 export default Heading;
+
 

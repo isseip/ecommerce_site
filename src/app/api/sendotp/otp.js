@@ -1,4 +1,4 @@
-import { connectToDatabase } from '../../../app/lib/mongodb';
+import { connectToDatabase } from '../../lib/mongodb';
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 
@@ -37,5 +37,5 @@ const transporter = nodemailer.createTransport({
 
   return NextResponse.json({ message: 'OTP sent' });
 }
-}
+
 

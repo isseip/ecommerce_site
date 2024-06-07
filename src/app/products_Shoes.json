@@ -1,69 +1,68 @@
-import product1 from './Men/images/product1.jpg'
-const prod=
+
 [
   {
     "id": 301,
     "name": "Air Max 270",
     "description": "These Nike Air Max 270 sneakers offer a perfect blend of style and comfort. With a lightweight Air Max unit and a sleek design, they're perfect for everyday wear.",
     "price": 149.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_1.jpg"
   },
   {
     "id": 302,
     "name": "Ultraboost 21",
     "description": "Adidas' Ultraboost 21 running shoes feature a responsive Boost midsole and a breathable Primeknit upper, making them ideal for high-performance activities.",
     "price": 179.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_2.jpg"
   },
   {
     "id": 303,
     "name": "Air Force 1",
     "description": "The iconic Air Force 1 sneakers from Nike are a classic choice for streetwear. With a clean, timeless design and excellent cushioning, they're a must-have for any sneaker collection.",
     "price": 99.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_3.jpg"
   },
   {
     "id": 304,
     "name": "Metcon 7",
     "description": "Nike's Metcon 7 training shoes are designed for high-intensity workouts. With a durable rubber outsole and a stable heel, they provide excellent traction and support.",
     "price": 129.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_4.jpg"
   },
   {
     "id": 305,
     "name": "Gel-Kayano 28",
     "description": "Asics' Gel-Kayano 28 running shoes offer superior cushioning and stability for long-distance runs. With a supportive midsole and a breathable mesh upper, they're a top choice for serious runners.",
     "price": 159.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_5.jpg"
   },
   {
     "id": 306,
     "name": "Yeezy Boost 350 V2",
     "description": "The Yeezy Boost 350 V2 sneakers from Adidas are a highly coveted and fashionable choice. With a distinctive Primeknit upper and a comfortable Boost midsole, they combine style and performance.",
     "price": 219.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_6.jpg"
   },
   {
     "id": 307,
     "name": "Vapormax Plus",
     "description": "Nike's Vapormax Plus sneakers feature a revolutionary Air Unit that provides lightweight cushioning and a stylish design inspired by the classic Air Max Plus.",
     "price": 189.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_7.jpg"
   },
   {
     "id": 308,
     "name": "Ultraboost DNA",
     "description": "The Ultraboost DNA from Adidas combines the brand's iconic Boost cushioning with a sustainable Primeblue upper made from recycled plastic waste.",
     "price": 169.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_8.jpg"
   },
   {
     "id": 309,
     "name": "Air Jordan 1 Retro High",
     "description": "The Air Jordan 1 Retro High is a timeless and iconic sneaker that pays homage to Michael Jordan's legacy. With premium materials and a classic design, it's a must-have for any sneakerhead.",
     "price": 169.99,
-    "imgUrl": product1
+    "imgUrl": "/images/shoes/product_9.jpg"
   }
  ]
 
- export default prod;
+ 

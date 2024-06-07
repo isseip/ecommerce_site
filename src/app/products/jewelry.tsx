@@ -1,5 +1,5 @@
 import React from 'react';
-import productsData from '../products_Jewelery';
+import productsData from '../products_Jewelery.json';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ const Products_Jewelery = () => {
     name: product.name,
     description: product.description,
     price: product.price,
-    imageUrl: typeof product.imgUrl === 'string' ? `/images/${product.imgUrl}` : product.imgUrl  // Adjust path if necessary
+    imageUrl: product.imgUrl  // Adjust path if necessary
   }));
 
   if (!products_jewelery || products_jewelery.length === 0) {
@@ -30,7 +30,7 @@ const Products_Jewelery = () => {
         {products_jewelery.map((product) => (
           <div key={product.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
             <Link href={`/Jewelry/${product.id}`}>
-                <Image src={product.imageUrl} alt={product.name} className="w-full h-48 object-cover" width={500} height={300} />
+                <Image src={product.imageUrl} alt={product.name} className="w-full h-70 object-cover" width={500} height={300} />
             </Link>
             <div className="p-4 flex flex-col flex-grow text-white">
               <h2 className="text-xl font-bold mb-2">

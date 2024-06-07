@@ -1,5 +1,5 @@
 import React from 'react';
-import products from '../products_Women';
+import products from '../products_Women.json';
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ const Products_Women = () => {
     name: product.name,
     description: product.description,
     price: product.price,
-    imageUrl: typeof product.imgUrl === 'string' ? `/images/${product.imgUrl}` : product.imgUrl  // Adjust path if necessary
+    imageUrl: product.imgUrl  // Adjust path if necessary
   }));
 
   if (!products_women || products_women.length === 0 ) {   // Corrected the check for empty products array
@@ -34,7 +34,7 @@ const Products_Women = () => {
                   <Image 
                     src={product.imageUrl}
                     alt={product.name}
-                    className="w-full h-48 object-cover"
+                    className="object-cover"
                     width={500}
                     height={300}
                     unoptimized={process.env.NODE_ENV === 'development'}  // Add unoptimized attribute for development mode if needed

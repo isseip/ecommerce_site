@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import products from '@/app/products_Women';
+import products from '@/app/products_Women.json';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import Heading from '@/app/components/heading';
@@ -52,7 +52,7 @@ const ProductDetail = () => {
       <Breadcrumbs />
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <Image src={product.imgUrl} alt={product.name} className="max-w-sm rounded-lg shadow-2xl" />
+          <Image src={product.imgUrl} alt={product.name} className="max-w-sm rounded-lg shadow-2xl" width={400} height={400} />
           <div>
             <h1 className="text-5xl font-bold">{product.name}</h1>
             <p className="py-6 text-xl">{product.description}</p>
