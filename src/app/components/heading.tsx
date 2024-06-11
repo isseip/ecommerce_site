@@ -64,7 +64,7 @@ function Heading() {
                 <span className="text-info">Subtotal: $999</span>
                 <div className="card-actions">
                   <button className="btn btn-primary btn-block">
-                    <Link href="/content">View Cart</Link>
+                    <Link href="/cart">View Cart</Link>
                   </button>
                 </div>
               </div>

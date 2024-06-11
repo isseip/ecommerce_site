@@ -1,6 +1,8 @@
-import React from 'react';
+'use client'
+import React, { use } from 'react';
 import products from '../products_Men.json';
 import Image, { StaticImageData } from 'next/image';
+import { useCart } from '../context/CartContext';
 import Link from 'next/link';
 interface Product {
   id: number;
@@ -11,6 +13,7 @@ interface Product {
 }
 
 const Products_Men = () => {
+  const { addToCart } = useCart();
   const products_men: Product[] = products.map(product => ({
     id: product.id,
     name: product.name,
@@ -55,7 +58,7 @@ const Products_Men = () => {
                     Price: ${product.price}
                   </Link>
                 </p>
-                <button className="btn btn-primary text-white bg-blue-500">Add to Cart</button>
+                <button className="btn btn-primary text-white bg-blue-500" onClick={()=>addToCart(product)}>Add to Cart</button>
               </div>
             </div>
           ))}
