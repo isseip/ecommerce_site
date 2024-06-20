@@ -87,7 +87,7 @@ Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
 
-Mail:-prathmeshgolande0711@gmail.com
+Mail: prathmeshgolande0711@gmail.com
 
 ## Learn More
 
