@@ -1,24 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ecommerce Website
 
-## Getting Started
+This is an ecommerce website project built with Next.js, featuring Dark Mode, Light Mode, product search, sorting by price, shopping cart management, and checkout functionality. The project utilizes Daisy UI for enhanced frontend design.
 
-First, run the development server:
+# Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+• Dark Mode / Light Mode: Toggle between light and dark themes for user preference.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+• Product Search: Easily search for products by name or category.
+    
+• Sorting: Sort products by price to find the best deals.
+    
+• Shopping Cart: Add products to a shopping cart for easy checkout.
+    
+• Checkout: Complete purchases securely through the checkout process.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+• Frontend: Next.js, React, Daisy UI, CSS
+
+• Backend: (Specify if applicable)
+
+• Version Control: Git, GitHub
+
+# Getting Started
+
+To get a local copy up and running follow these simple steps:
+
+• Clone the repository:
+
+    https://github.com/isseip/ecommerce_site
+
+• Install dependencies:
+
+     npm install
+
+• Run the development server:
+
+    npm run dev
+
+• Open Dev Server
+
+    Open http://localhost:3000 in your browser to view the website.
+
+# Usage
+
+• Navigate through the website using the provided navigation links.
+
+• Toggle between Dark Mode and Light Mode using the theme switcher.
+
+• Search for products using the search bar.
+
+• Add products to the cart and proceed to checkout.
+
+# Contributing
+
+Contributions are welcome. Please follow the steps below:
+
+    Fork the Project
+    Create your Feature Branch (git checkout -b feature/AmazingFeature)
+    Commit your Changes (git commit -m 'Add some AmazingFeature')
+    Push to the Branch (git push origin feature/AmazingFeature)
+    Open a Pull Request
+
+# Screenshot
+
+  • Screenshot_1 (Home)
+  
+  ![Screenshot 2024-06-20 173122](https://github.com/isseip/ecommerce_site/assets/95286066/6865f47a-2aaa-4aea-929b-f86c5f206cf0)
+
+     
+  • Screenshot_2 (Men's Section)
+  
+   ![Screenshot (967)](https://github.com/isseip/ecommerce_site/assets/95286066/c5899285-c62b-4964-b4c0-3549a08065d4)
+
+
+   • Screenshot_3 (Cart)  
+   
+   ![Screenshot (970)](https://github.com/isseip/ecommerce_site/assets/95286066/0e90e4b4-8ec4-4372-8665-a8d17f123407)
+
+    
+
+# License
+
+
+Distributed under the MIT License. See LICENSE for more information.
+
+## Contact
+
+Mail:-prathmeshgolande0711@gmail.com
 
 ## Learn More
 
