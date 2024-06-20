@@ -8,6 +8,7 @@ import Footer from '@/app/components/footer';
 import Breadcrumbs from '@/app/components/breadcrums';
 import { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import { useCart } from '@/app/context/CartContext';
 
 interface Product {
   id: number;
@@ -15,6 +16,7 @@ interface Product {
   description: string;
   price: number;
   imgUrl: string | StaticImageData;
+  category: string;
 }
 
 const ProductDetail = () => {
@@ -22,6 +24,7 @@ const ProductDetail = () => {
   const productId = pathname.split('/').pop(); // Extract the product ID from the path
   const [product, setProduct] = useState<Product | null>(null);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const { addToCart }=useCart();
 
   useEffect(() => {
     if (productId) {
@@ -57,7 +60,7 @@ const ProductDetail = () => {
             <h1 className="text-5xl font-bold">{product.name}</h1>
             <p className="py-6 text-xl">{product.description}</p>
             <p className="text-lg font-semibold mt-4 p-1">Price: ${product.price}</p>
-            <button className="btn btn-primary text-white bg-blue-500">Add To Cart</button>
+            <button className="btn btn-primary text-white bg-blue-500" onClick={()=>addToCart(product)}>Add To Cart</button>
           </div>
         </div>
       </div>
@@ -91,7 +94,7 @@ const ProductDetail = () => {
                    Price: ${relatedProduct.price}
                   </Link>
                 </p>
-                <button className="btn btn-primary text-white bg-blue-500 mt-2">Add to Cart</button>
+                <button className="btn btn-primary text-white bg-blue-500 mt-2" onClick={()=>addToCart(relatedProduct)}>Add to Cart</button>
               </div>
             </div>
           ))}

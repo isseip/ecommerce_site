@@ -5,63 +5,72 @@
     "name": "Diamond Stud Earrings",
     "description": "These classic diamond stud earrings are a timeless addition to any jewelry collection. Set in 14K white gold, they feature brilliant-cut diamonds that sparkle with every move.",
     "price": 499.99,
-    "imgUrl":"/images/jewelry/product_1.jpg"
+    "imgUrl":"/images/jewelry/product_1.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 402,
     "name": "Pearl Necklace",
     "description": "This elegant pearl necklace features a strand of lustrous freshwater pearls, perfectly complemented by a 14K yellow gold clasp. It's a sophisticated and versatile piece that elevates any outfit.",
     "price": 249.99,
-    "imgUrl": "/images/jewelry/product_2.jpg"
+    "imgUrl": "/images/jewelry/product_2.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 403,
     "name": "Tennis Bracelet",
     "description": "This stunning tennis bracelet is a true statement piece. Crafted in 18K white gold, it features a brilliant line of round-cut diamonds that sparkle from every angle.",
     "price": 1499.99,
-    "imgUrl": "/images/jewelry/product_3.jpg"
+    "imgUrl": "/images/jewelry/product_3.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 404,
     "name": "Sapphire Ring",
     "description": "This exquisite sapphire ring features a deep blue oval-cut sapphire gemstone surrounded by a halo of sparkling diamonds. Set in 14K white gold, it's a timeless and elegant choice.",
     "price": 899.99,
-    "imgUrl": "/images/jewelry/product_4.jpg"
+    "imgUrl": "/images/jewelry/product_4.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 405,
     "name": "Men's Watch",
     "description": "This sophisticated men's watch features a sleek stainless steel case and a genuine leather strap. With a chronograph movement and water resistance up to 100 meters, it's both stylish and functional.",
     "price": 399.99,
-    "imgUrl": "/images/jewelry/product_5.jpg"
+    "imgUrl": "/images/jewelry/product_5.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 406,
     "name": "Bangle Bracelet Set",
     "description": "This set of three bangles is a chic and versatile addition to any jewelry collection. Crafted in 14K yellow gold, they feature a polished finish and a slight texture for added interest.",
     "price": 349.99,
-    "imgUrl": "/images/jewelry/product_6.jpg"
+    "imgUrl": "/images/jewelry/product_6.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 407,
     "name": "Emerald Pendant",
     "description": "This stunning emerald pendant features a vibrant oval-cut emerald gemstone set in 18K white gold. Suspended from a delicate chain, it's a sophisticated and eye-catching piece.",
     "price": 899.99,
-    "imgUrl": "/images/jewelry/product_7.jpg"
+    "imgUrl": "/images/jewelry/product_7.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 408,
     "name": "Men's Cufflinks",
     "description": "These stylish cufflinks are the perfect accessory for any formal occasion. Crafted in sterling silver with a sleek onyx inlay, they add a touch of sophisticated elegance to any ensemble.",
     "price": 149.99,
-    "imgUrl": "/images/jewelry/product_8.jpg"
+    "imgUrl": "/images/jewelry/product_8.jpg",
+    "category":"Jewelry"
   },
   {
     "id": 409,
     "name": "Diamond Hoop Earrings",
     "description": "These classic diamond hoop earrings are a versatile and timeless choice. Crafted in 14K yellow gold, they feature a line of brilliant-cut diamonds that add a touch of sparkle to any outfit.",
     "price": 699.99,
-    "imgUrl": "/images/jewelry/product_9.jpg"
+    "imgUrl": "/images/jewelry/product_9.jpg",
+    "category":"Jewelry"
   }
  ]
 

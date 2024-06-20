@@ -8,13 +8,15 @@ import Footer from '@/app/components/footer';
 import Breadcrumbs from '@/app/components/breadcrums';
 import { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import { useCart } from '../../context/CartContext';
 
 interface Product {
   id: number;
   name: string;
   description: string;
   price: number;
-  imgUrl: string | StaticImageData ;
+  imgUrl: string | StaticImageData;
+  category:string;
 }
 
 const ProductDetail = () => {
@@ -22,6 +24,7 @@ const ProductDetail = () => {
   const productId = pathname.split('/').pop(); // Extract the product ID from the path
   const [product, setProduct] = useState<Product | null>(null);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const { addToCart } = useCart(); // Using the useCart hook
 
   useEffect(() => {
     if (productId) {
@@ -53,11 +56,16 @@ const ProductDetail = () => {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
           <Image src={product.imgUrl} alt={product.name} className="max-w-sm rounded-lg shadow-2xl" width={400} height={400}/>
-            <div>
+          <div>
             <h1 className="text-5xl font-bold">{product.name}</h1>
             <p className="py-6 text-xl">{product.description}</p>
             <p className="text-lg font-semibold mt-4 p-1">Price: ${product.price}</p>
-            <button className="btn btn-primary text-white bg-blue-500">Add To Cart</button>
+            <button 
+              className="btn btn-primary text-white bg-blue-500"
+              onClick={() => addToCart(product)}
+            >
+              Add To Cart
+            </button>
           </div>
         </div>
       </div>
@@ -67,13 +75,13 @@ const ProductDetail = () => {
           {relatedProducts.map((relatedProduct) => (
             <div key={relatedProduct.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
               <Link href={`/Men/${relatedProduct.id}`}>
-                  <Image
-                    src={relatedProduct.imgUrl}
-                    alt={relatedProduct.name}
-                    className="w-full h-48 object-cover"
-                    width={500}
-                    height={300}
-                  />
+                <Image
+                  src={relatedProduct.imgUrl}
+                  alt={relatedProduct.name}
+                  className="w-full h-48 object-cover"
+                  width={500}
+                  height={300}
+                />
               </Link>
               <div className="p-4 flex flex-col flex-grow text-white">
                 <h2 className="text-xl font-bold mb-2">
@@ -83,15 +91,20 @@ const ProductDetail = () => {
                 </h2>
                 <p className="flex-grow">
                   <Link href={`/Men/${relatedProduct.id}`}>
-                  {relatedProduct.description}
+                    {relatedProduct.description}
                   </Link>
                 </p>
                 <p className="text-lg font-semibold mt-4">
                   <Link href={`/Men/${relatedProduct.id}`}>
-                   Price: ${relatedProduct.price}
+                    Price: ${relatedProduct.price}
                   </Link>
                 </p>
-                <button className="btn btn-primary text-white bg-blue-500 mt-2">Add to Cart</button>
+                <button
+                  className="btn btn-primary text-white bg-blue-500 mt-2"
+                  onClick={() => addToCart(relatedProduct)}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           ))}
@@ -103,4 +116,3 @@ const ProductDetail = () => {
 };
 
 export default ProductDetail;
-

@@ -7,33 +7,11 @@ import { useCart } from '../context/CartContext';
 const Heading: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
-  const pathname = usePathname();
-
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Extract the section from the current pathname
-      const section = pathname.split('/')[1] || 'Men';
-      router.push(`/${section}/search?query=${searchQuery}`);
-    }
-  };
-
   return (
     <>
-      <div className="navbar bg-base-100 fixed top-0 left-0 right-0 z-50">
+      <div  className="navbar bg-base-100 fixed top-0 left-0 right-0 z-50 data-theme=">
         <div className="flex-1">
           <Link href="/" className="btn btn-ghost text-xl">NexBuy</Link>
-        </div>
-        <div className="flex-none mx-auto">
-          <form onSubmit={handleSearch}>
-            <input
-              type="text"
-              placeholder="Search With NexBuy🫡"
-              className="input input-bordered w-full max-w-xs"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </form>
         </div>
         <div className="flex-none">
           <CartSummary />
@@ -56,7 +34,7 @@ const Heading: React.FC = () => {
                   <span className="badge">New</span>
                 </a>
               </li>
-              <li><a href='/Orders'>Your Orders</a></li>
+              <li><a>Settings</a></li>
               <li><a>Logout</a></li>
             </ul>
           </div>
