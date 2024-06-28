@@ -49,7 +49,7 @@ const Cart: React.FC = () => {
                   unoptimized={process.env.NODE_ENV === 'development'}
                 />
               </Link>
-              <div className={`flex flex-col flex-grow p-4 text-white ${textColor}`}>
+              <div className={`flex flex-col flex-grow p-5 text-white ${textColor}`}>
                 <h2 className={`text-xl font-bold mb-2  ${textColor}`}>
                   <Link href={`/${item.category}/${item.id}`}>
                     {item.name}

@@ -69,7 +69,7 @@ const Products_Women: React.FC = () => {
           </select>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
         {sortedProducts.map((product) => (
           <div key={product.id} className="rounded-lg bg-base-100 shadow-md overflow-hidden flex flex-col">
             <Link href={`/Women/${product.id}`}>

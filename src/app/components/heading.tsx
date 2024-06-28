@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useCart } from '../context/CartContext';
+import AutoSlidingCarousel from './sliding';
 
 const Heading: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');

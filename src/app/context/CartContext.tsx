@@ -8,7 +8,7 @@ interface Product {
   description: string;
   price: number;
   imgUrl: string | StaticImageData;
-  category: string
+  category: string;
 }
 
 interface CartItem extends Product {
@@ -17,7 +17,7 @@ interface CartItem extends Product {
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: Product) => void;
+  addToCart: (product: Product ) => void;
   removeFromCart: (productId: number) => void;
   increaseQuantity: (productId: number) => void;
   decreaseQuantity: (productId: number) => void;
