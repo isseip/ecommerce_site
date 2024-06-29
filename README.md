@@ -78,12 +78,7 @@ Contributions are welcome. Please follow the steps below:
    
    ![Screenshot (970)](https://github.com/isseip/ecommerce_site/assets/95286066/0e90e4b4-8ec4-4372-8665-a8d17f123407)
 
-    
 
-# License
-
-
-Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
 
