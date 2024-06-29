@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useCart } from '../context/CartContext';
-import AutoSlidingCarousel from './sliding';
+import Image from 'next/image';
 
 const Heading: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -41,9 +41,11 @@ const Heading: React.FC = () => {
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img
+                <Image
                   alt="User Avatar"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  src="/images/avatar/avatar_1.jpg"
+                  width={200}
+                  height={200}
                 />
               </div>
             </div>
